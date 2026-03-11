@@ -1,0 +1,132 @@
+body{
+margin:0;
+font-family:Poppins;
+background:#0a0a0a;
+color:#D4AF37;
+text-align:center;
+}
+
+section{
+padding:80px 20px;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:black;
+}
+
+.hero h1{
+font-family:Orbitron;
+font-size:60px;
+}
+
+.batch{
+font-size:22px;
+}
+
+.tagline{
+opacity:0.8;
+}
+
+.scroll{
+display:inline-block;
+margin-top:30px;
+color:#D4AF37;
+text-decoration:none;
+}
+
+
+/* countdown */
+
+#countdown{
+font-size:40px;
+font-weight:bold;
+margin-top:20px;
+}
+
+
+/* card */
+
+.card{
+background:#111;
+padding:30px;
+border-radius:10px;
+max-width:400px;
+margin:auto;
+}
+
+
+/* RSVP */
+
+.rsvp-card{
+background:#111;
+padding:30px;
+max-width:350px;
+margin:auto;
+border-radius:10px;
+}
+
+input,select{
+display:block;
+margin:10px auto;
+padding:12px;
+width:90%;
+border:none;
+}
+
+button{
+background:#D4AF37;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+
+/* MEMORY LANE */
+
+.memoryLane{
+padding:120px 0;
+overflow:hidden;
+background:#0a0a0a;
+}
+
+.carousel{
+width:100%;
+overflow:hidden;
+}
+
+.carouselTrack{
+display:flex;
+gap:15px;
+width:max-content;
+animation:scrollPhotos 40s linear infinite;
+}
+
+.carouselTrack img{
+height:180px;
+width:280px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.carouselTrack img:hover{
+transform:scale(1.1);
+}
+
+@keyframes scrollPhotos{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+
+/* footer */
+
+footer{
+padding:40px;
+background:#111;
+}
