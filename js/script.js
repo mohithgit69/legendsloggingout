@@ -1,6 +1,6 @@
-// countdown timer
+// COUNTDOWN
 
-const eventDate = new Date("March 30, 2026 18:00:00").getTime();
+const eventDate = new Date("March 30, 2026 09:30:00").getTime();
 
 setInterval(function(){
 
@@ -13,42 +13,27 @@ const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
 const seconds = Math.floor((distance%(1000*60))/1000);
 
 document.getElementById("countdown").innerHTML =
-days + "d " +
-hours + "h " +
-minutes + "m " +
-seconds + "s";
+days+"d "+hours+"h "+minutes+"m "+seconds+"s";
 
 },1000);
 
 
 
-// RSVP redirect
+// SCROLL FADE ANIMATION
 
-function submitRSVP(){
+const sections=document.querySelectorAll(".fadeSection")
 
-const name = document.getElementById("name").value
-const roll = document.getElementById("roll").value
-const phone = document.getElementById("phone").value
-const attend = document.getElementById("attend").value
+window.addEventListener("scroll",()=>{
 
-if(!name || !roll || !phone || !attend){
+sections.forEach(section=>{
 
-alert("Please fill all fields")
-return
+const top=section.getBoundingClientRect().top
+const trigger=window.innerHeight*0.85
 
+if(top<trigger){
+section.classList.add("visible")
 }
 
-if(attend === "yes"){
+})
 
-window.location.href =
-"https://forms.gle/DBwomfZ3FvkBrrAm7"
-
-}
-
-else{
-
-alert("Thank you for informing us.")
-
-}
-
-}
+})
