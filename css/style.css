@@ -1,22 +1,63 @@
-/* GLOBAL */
-
 body{
 margin:0;
-font-family:Poppins, sans-serif;
+font-family:Poppins,sans-serif;
 color:#D4AF37;
 text-align:center;
+overflow-x:hidden;
 
 background:
-url("https://www.transparenttextures.com/patterns/asfalt-dark.png"),
-radial-gradient(circle at top,#1a1a1a,#000000);
+
+/* gold glow center */
+radial-gradient(circle at 50% 30%, rgba(212,175,55,0.15), transparent 40%),
+
+/* subtle corner glow */
+radial-gradient(circle at 80% 80%, rgba(212,175,55,0.08), transparent 40%),
+
+/* cinematic bottom fade */
+linear-gradient(to top, rgba(212,175,55,0.08), transparent 30%),
+
+/* base black */
+#000;
+}
+
+.particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+background-image:
+radial-gradient(#D4AF37 1px, transparent 1px);
+background-size:120px 120px;
+opacity:0.15;
+animation:particleMove 60s linear infinite;
+}
+
+@keyframes particleMove{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-200px);
+}
 }
 
 
-/* SECTION SPACING */
 
-section{
-padding:80px 20px;
+/* PARTICLES BACKGROUND */
+
+.particles{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 30%,rgba(212,175,55,0.15),transparent 40%),
+radial-gradient(circle at 80% 60%,rgba(212,175,55,0.1),transparent 40%);
+z-index:-1;
 }
+
 
 
 /* HERO */
@@ -26,21 +67,26 @@ height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#000;
+background:transparent;
+position:relative
 }
 
 .hero h1{
 font-family:Orbitron;
-font-size:60px;
-margin-bottom:10px;
+font-size:70px;
+opacity:0;
+animation:fadeIn 2s forwards;
 }
 
 .batch{
 font-size:22px;
+opacity:0;
+animation:fadeIn 2s 1s forwards;
 }
 
 .tagline{
-opacity:0.8;
+opacity:0;
+animation:fadeIn 2s 2s forwards;
 }
 
 .scroll{
@@ -48,16 +94,28 @@ display:inline-block;
 margin-top:30px;
 color:#D4AF37;
 text-decoration:none;
+animation:pulse 2s infinite;
 }
 
 
-/* COUNTDOWN */
 
-#countdown{
-font-size:40px;
-font-weight:bold;
-margin-top:20px;
+/* SECTIONS */
+
+section{
+padding:100px 20px;
 }
+
+.fadeSection{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fadeSection.visible{
+opacity:1;
+transform:translateY(0);
+}
+
 
 
 /* EVENT CARD */
@@ -69,6 +127,7 @@ border-radius:10px;
 max-width:400px;
 margin:auto;
 }
+
 
 
 /* RSVP */
@@ -104,12 +163,24 @@ opacity:0.9;
 }
 
 
+
+/* COUNTDOWN */
+
+#countdown{
+font-size:40px;
+font-weight:bold;
+margin-top:20px;
+}
+
+
+
 /* MEMORY LANE */
 
 .memoryLane{
 padding:120px 0;
 overflow:hidden;
-background:#0a0a0a;
+background:transparent;
+position: relative;
 }
 
 .carousel{
@@ -134,22 +205,9 @@ transition:0.3s;
 
 .carouselTrack img:hover{
 transform:scale(1.1);
+animation-play-state:paused;
 }
 
-
-/* ANIMATION */
-
-@keyframes scrollPhotos{
-
-0%{
-transform:translateX(0);
-}
-
-100%{
-transform:translateX(-50%);
-}
-
-}
 
 
 /* FOOTER */
@@ -157,4 +215,24 @@ transform:translateX(-50%);
 footer{
 padding:40px;
 background:#111;
+}
+
+
+
+/* ANIMATIONS */
+
+@keyframes scrollPhotos{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes pulse{
+0%{opacity:0.5}
+50%{opacity:1}
+100%{opacity:0.5}
 }
