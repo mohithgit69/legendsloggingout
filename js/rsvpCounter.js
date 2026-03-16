@@ -1,15 +1,25 @@
-const COUNTER_API = "https://script.google.com/macros/library/d/1rAkt3oeMgi3gIpbMGooupzvwLsXtE3BCd3dvxsjMxpmQ4_gV1X8kO2R1/1"
+function submitRSVP(){
 
-async function loadCounter(){
+const name=document.getElementById("name").value
+const roll=document.getElementById("roll").value
+const phone=document.getElementById("phone").value
+const attend=document.getElementById("attend").value
 
-const response = await fetch(COUNTER_API)
+if(!name || !roll || !phone || !attend){
 
-const data = await response.json()
-
-document.getElementById("rsvpCounter").innerText = data.count
+alert("Please fill all fields")
+return
 
 }
 
-loadCounter()
+if(attend==="yes"){
 
-setInterval(loadCounter,5000)
+window.location.href="https://forms.gle/DBwomfZ3FvkBrrAm7"
+
+}else{
+
+alert("Thank you for informing us.")
+
+}
+
+}
