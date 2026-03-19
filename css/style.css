@@ -236,3 +236,39 @@ to{opacity:1;transform:translateY(0);}
 50%{opacity:1}
 100%{opacity:0.5}
 }
+
+/* ================= MEMORIES ================= */
+
+.mem-card{
+background:#111;
+padding:30px;
+max-width:400px;
+margin:auto;
+border-radius:10px;
+border:1px solid #D4AF37;
+box-shadow:0 0 20px rgba(212,175,55,0.2);
+}
+
+.mem-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#D4AF37;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+.mem-btn:hover{
+box-shadow:0 0 15px #D4AF37;
+}
+
+.hidden{
+display:none;
+}
+
+#memCountdown{
+margin-top:10px;
+font-size:18px;
+}
