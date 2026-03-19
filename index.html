@@ -18,8 +18,6 @@
     
 <div class="particles"></div>
 
-<div class="particles"></div>
-
 <header class="hero">
 
 <div class="overlay">
@@ -38,83 +36,65 @@ Until we meet again.
 
 </header>
 
-
-
 <section id="countdownSection" class="fadeSection">
-
 <h2>Farewell Begins In</h2>
-
 <div id="countdown"></div>
-
 </section>
 
-
-
 <section id="details" class="fadeSection">
-
 <h2>Event Details</h2>
-
 <div class="card">
-
 <p><b>Date</b> March 30, 2026</p>
 <p><b>Venue</b> MRCE OLD SEMINAR HALL</p>
 <p><b>Time</b> 9.30AM Onwards</p>
-
 </div>
-
 </section>
 
-
-
 <section class="rsvp fadeSection">
-
 <h2>RSVP</h2>
-
 <div class="rsvp-card">
-
 <input id="name" placeholder="Name">
-
 <input id="roll" placeholder="Roll Number">
-
 <input id="phone" placeholder="Phone Number">
-
 <select id="attend">
-
 <option value="">Will you attend?</option>
 <option value="yes">Yes, I will attend</option>
 <option value="no">Unable to attend</option>
-
 </select>
-
 <button onclick="submitRSVP()">Confirm Attendance</button>
-
 </div>
-
 </section>
-
-
 
 <section class="memoryLane fadeSection">
-
 <h2>Memory Lane</h2>
-
 <div class="carousel">
-
 <div class="carouselTrack" id="carouselTrack"></div>
+</div>
+</section>
 
+<!-- 🔥 NEW MEMORIES SECTION -->
+<section id="memories" class="fadeSection">
+<h2>Memories Archive</h2>
+
+<div class="mem-card" id="locked">
+<h3>🔒 Archive Locked</h3>
+<p>Memories will be unlocked after the farewell.</p>
+<div id="memCountdown"></div>
+</div>
+
+<div class="mem-card hidden" id="unlocked">
+<h3>🎉 Archive Unlocked</h3>
+<p>Relive the moments.</p>
+<a id="albumBtn" href="#" target="_blank" class="mem-btn">
+View Full Album
+</a>
 </div>
 
 </section>
 
-
-
 <footer>
-
 <p>ECE 2026 • Au-Revoir</p>
-
 </footer>
-
-
 
 <script src="js/script.js"></script>
 <script src="js/gallery.js"></script>
