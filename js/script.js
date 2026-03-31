@@ -42,7 +42,7 @@ section.classList.add("visible")
 
 // 🔧 EDIT THESE
 const memoriesEventDate = new Date("March 30, 2026 12:00:00").getTime();
-const albumLink = https://drive.google.com/drive/folders/1U-sn2JubTCHOVKlMaeSuDPbj3Xsi2qaz?usp=sharing;
+const albumLink = "PASTE_PHOTOGRAPHER_LINK_HE";
 
 // elements
 const memLocked = document.getElementById("locked");
