@@ -14,11 +14,11 @@ return
 
 if(attend==="yes"){
 
-window.location.href="https://forms.gle/DBwomfZ3FvkBrrAm7"
+alert("We gave our farewell to our beloved seniors")
 
 }else{
 
-alert("Thank you for informing us.")
+alert("We gave our farewell to our beloved seniors")
 
 }
 
